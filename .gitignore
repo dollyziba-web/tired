@@ -16,6 +16,7 @@ list*.js
 mirror.cjs
 find_images.cjs
 download_assets.js
+download_real_images.cjs
 reference.html
 style.css
 page.js
@@ -31,5 +32,6 @@ page_pretty.js
 fix_image_urls.cjs
 inspect_hero_tag.cjs
 replace_with_local_assets.cjs
+test.jpg
 .env
 .env.local
