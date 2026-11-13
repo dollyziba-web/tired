@@ -17,6 +17,8 @@ mirror.cjs
 find_images.cjs
 download_assets.js
 download_real_images.cjs
+restore_exact_original.cjs
+restore_pristine_chunks.cjs
 reference.html
 style.css
 page.js
