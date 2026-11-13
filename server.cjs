@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const url = require('url');
 
-const EXACT_DIR = path.resolve(__dirname, 'exact-site');
+const ROOT_DIR = path.resolve(__dirname);
 const UPSTREAM_HOST = 'prospira-agency-iuzt.vercel.app';
 
 const mimeTypes = {
@@ -74,7 +74,7 @@ function requestHandler(req, res) {
     pathname = '/' + routeMap[pathname];
   }
 
-  const filePath = path.join(EXACT_DIR, pathname);
+  const filePath = path.join(ROOT_DIR, pathname);
 
   fs.stat(filePath, (err, stats) => {
     if (!err && stats.isFile()) {
@@ -83,7 +83,7 @@ function requestHandler(req, res) {
       res.writeHead(200, { 'Content-Type': contentType });
       fs.createReadStream(filePath).pipe(res);
     } else {
-      // If not found locally in exact-site, fallback proxy to live Vercel
+      // Fallback proxy to live Vercel
       proxyRequest(req, res);
     }
   });
