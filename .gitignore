@@ -30,5 +30,6 @@ page_pretty.js
 *_main.html
 fix_image_urls.cjs
 inspect_hero_tag.cjs
+replace_with_local_assets.cjs
 .env
 .env.local
