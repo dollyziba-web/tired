@@ -28,5 +28,7 @@ contact.js
 page_strings.json
 page_pretty.js
 *_main.html
+fix_image_urls.cjs
+inspect_hero_tag.cjs
 .env
 .env.local
